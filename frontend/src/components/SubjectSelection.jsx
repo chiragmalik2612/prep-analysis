@@ -16,11 +16,7 @@ const SubjectSelection = () => {
           <div>
             <img
               src="/phy.png"
-              style={{
-                maxWidth: "30px",
-                maxHeight: "30px",
-                objectFit: "contain",
-              }}
+              className='subject-image'
             />
           </div>
         </div>
@@ -32,11 +28,7 @@ const SubjectSelection = () => {
         <div>
             <img
               src="/chem.png"
-              style={{
-                maxWidth: "30px",
-                maxHeight: "30px",
-                objectFit: "contain",
-              }}
+              className='subject-image'
             />
           </div>
         </div>
@@ -48,11 +40,7 @@ const SubjectSelection = () => {
           <div>
             <img
               src="/maths.png"
-              style={{
-                maxWidth: "30px",
-                maxHeight: "30px",
-                objectFit: "contain",
-              }}
+              className='subject-image'
             />
           </div>
         </div>

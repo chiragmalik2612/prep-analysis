@@ -31,3 +31,9 @@
   width: 140px;
   cursor: pointer;
 }
+
+.subject-image{
+    max-width: 30px;
+    max-height: 30px;
+    object-fit: contain;
+}
