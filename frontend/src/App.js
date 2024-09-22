@@ -1,8 +1,9 @@
+import SubjectSelection from "./components/SubjectSelection";
 
 function App() {
   return (
     <div className="App">
-      <h1>Project</h1>
+      <SubjectSelection/>
     </div>
   );
 }
