@@ -1,0 +1,56 @@
+
+  
+  .chapter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .chapter {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .chapter h3 {
+    margin-bottom: 8px;
+  }
+  
+ .buttons{
+    display: flex;
+ }
+
+  .chapter button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chapter button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .chapter {
+      flex: 1 1 calc(50% - 40px); /* Two chapters per row with some gap */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .chapter {
+      flex: 1 1 100%; /* One chapter per row on mobile */
+    }
+  }
+  
