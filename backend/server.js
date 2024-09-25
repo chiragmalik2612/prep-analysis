@@ -3,10 +3,13 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
+const ResourcesRoutes = require("./routes/ResourcesRoutes");
+
 const app = express();
 
-// middleware
 app.use(express.json());
+
+app.use('/uploads', express.static('uploads'));
 
 
 app.use((req, res, next) => {
@@ -14,14 +17,16 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 
+app.use("/api/resources", ResourcesRoutes);
 
-// connect to db
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("connected to database");
-    // listen to port
     app.listen(process.env.PORT, () => {
       console.log("listening for requests on port", process.env.PORT);
     });
